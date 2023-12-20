@@ -9,6 +9,7 @@ Vagrant.configure("2") do |config|
       server.vm.provider "virtualbox" do |vb|
         vb.memory = "4096"
         vb.cpus = 2
+		vb.name = "server"
       end
     end
     config.vm.define "client" do |client|
@@ -17,6 +18,7 @@ Vagrant.configure("2") do |config|
       client.vm.provider "virtualbox" do |vb|
         vb.memory = "2048"
         vb.cpus = 2
+		vb.name = "client"
       end
     end
 end
